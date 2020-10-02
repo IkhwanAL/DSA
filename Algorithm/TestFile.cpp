@@ -12,5 +12,10 @@ main(){
     dq.insertFront(10);
     dq.insertFront(11);
     dq.insertRear(12);
+    dq.insertFront(15);
+    dq.insertFront(20);
+    dq.insertRear(1);
+    dq.deleteFront();
+    dq.deleteRear();
     dq.display();
 }

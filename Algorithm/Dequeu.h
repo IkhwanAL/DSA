@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #define MAX 6
 template <class CC>
 class Dequeue{
@@ -22,6 +24,8 @@ class Dequeue{
         bool isEmpty(){
             if(front == -1){
                 return true;
+            }else{
+                return false;
             }
         }
         void display(){
@@ -57,7 +61,7 @@ class Dequeue{
             }else{
                 front = front + 1;
             }
-            return;
+            arr[front] = 0;
         }
         void insertRear(CC data){
             if(isFull()){
@@ -83,10 +87,11 @@ class Dequeue{
                 front = -1;
                 rear = -1;
             }else if(rear == 0){
-                rear = rear + 1;
+                rear = size - 1;
             }else{
                 rear = rear - 1;
             }
+            arr[rear] = 0;
         }
         
 };
