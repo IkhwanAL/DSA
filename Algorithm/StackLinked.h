@@ -11,7 +11,7 @@ class StackList{
             headStack = nullptr;
             size = 0;
         }
-        void Display(){
+        void DisplayRev(){
             NodeSide<Type> *temp = headStack;
             while(temp->next != nullptr){
                 // cout << temp->data << " ";
@@ -24,6 +24,13 @@ class StackList{
             }
             cout << "\n";
             // delete temp;
+        }
+        void Display(){
+            NodeSide<Type> *temp = headStack;
+            while(temp != nullptr){
+                cout << temp->data << " ";
+                temp = temp->next;  
+            }
         }
         /**
          * Insert Into Head
@@ -57,6 +64,13 @@ class StackList{
             delete temp;
             headStack = realData;
             size--;
+        }
+        bool Empty(){
+            if(headStack != nullptr){
+                return false;
+            }else{
+                return true;
+            }
         }
         void Push2(Type data){
             NodeSide<Type> *newNode = new NodeSide<Type>;
