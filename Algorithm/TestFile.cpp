@@ -1,4 +1,5 @@
 #include "StackLinked.h"
+#include "Dequeu.h"
 main(){
     // QueueCircular<int> QC;
     // QC.EnQueue(10);
