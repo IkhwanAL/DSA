@@ -1,2 +1,2 @@
-# CPP-DSA
+# DSA
 #For HacktoberFest
