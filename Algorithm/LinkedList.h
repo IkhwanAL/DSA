@@ -14,6 +14,12 @@ struct NodeSide{
     NodeSide *prev;
     T data;
     NodeSide *next;
+    NodeSide(T data){
+        this->data = data;
+        this->prev = nullptr;
+        this->next = nullptr; 
+    }
+    NodeSide(){}
 };
 namespace algo{
     template <class Type>
