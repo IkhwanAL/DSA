@@ -1,1 +1,2 @@
-Membuat Kalkulator dengan C++
+1. Membuat Kalkulator dengan C++
+2. Membuat Fitur untuk Hapus file
