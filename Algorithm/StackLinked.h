@@ -1,12 +1,16 @@
+#ifndef CPP_DSA_ALGORITHM_STACKLINKED_H
+#define CPP_DSA_ALGORITHM_STACKLINKED_H
+
 #include "LinkedList.h" // HandMade Array
 using namespace algo;
 template<class Type>
-class StackList{
+class StackList {
+    class linkedlist;
     private :
         // Permanent Value
         NodeSide<Type> *headStack;
         int size;
-    public : 
+    public :
         StackList(){
             headStack = nullptr;
             size = 0;
@@ -58,6 +62,9 @@ class StackList{
             NodeSide<Type> *realData = headStack->next;
             NodeSide<Type> *temp = new NodeSide<Type>;
 
+            if(realData == nullptr){
+                return;
+            }
             temp = headStack;
             realData->prev = nullptr;
 
@@ -232,3 +239,4 @@ class QueueCircular{
             searchData->next = newNode;
         }
 };
+#endif
